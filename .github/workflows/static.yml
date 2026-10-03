@@ -32,7 +32,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Prepare
-        run: "cp bash.sh public/lockproto.sh"
+        run: |
+          mkdir -p public
+          cp bash.sh public/lockproto.sh
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
