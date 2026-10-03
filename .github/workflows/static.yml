@@ -35,6 +35,7 @@ jobs:
         run: |
           mkdir -p public
           cp bash.sh public/lockproto.sh
+          cp public/index.html public/404.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
@@ -45,4 +46,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
-        
